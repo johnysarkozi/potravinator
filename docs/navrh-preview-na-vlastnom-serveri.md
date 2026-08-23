@@ -175,16 +175,40 @@ Tyhle věci na `/navrh` nejdou dořešit jen na frontendu:
 - **Historie cen se stahuje po produktech.** `GET /product_price_histories/{productId}`
   je custom route pro jeden produkt; kolekce `/product_price_histories` neexistuje
   (vrací 404), takže nejde načíst historii pro celý seznam jedním dotazem.
-  Frontend to obchází tím, že historii tahá teprve když se sekce s grafy
-  dostane do viewportu (IntersectionObserver). Pro seznam o 20 položkách
-  to je pořád 20 dotazů. Řešením by byl filtr na kolekci, např.
-  `GET /product_price_histories?product.id[]=1&product.id[]=2`.
+  Frontend historii tahá se seznamem (limit 40 položek) — potřebuje ji
+  jak graf, tak odznak měsíční změny v řádku a datum platnosti cen.
+  Pro seznam o 20 položkách to je 20 dotazů. Řešením by byl filtr na
+  kolekci, např. `GET /product_price_histories?product.id[]=1&product.id[]=2`.
+
+- **Odkazy na produkty se musí dotahovat po jedné.** Embedované varianty
+  v `GET /shopping-lists/{id}/shopping-list-rows` neobsahují `url` — jen
+  `/product_variants` ho vrací (a to u 100 % variantů, měřeno na 976
+  variantech z 5 obchodů). Dotáhnout je hromadně nejde:
+  `?id=46570` se ignoruje a vrátí celou kolekci, `?product.id[]=…` nevrátí nic
+  a opakovaný `?product.id=A&product.id=B` si nechá jen poslední.
+  Navíc to nelze vzít ani po produktu: nahrazený sloupec nese variantu
+  *jiného* produktu, takže `?product.id=` ji nedohledá. Zbývá tedy
+  `GET /product_variants/{variantId}`, jeden dotaz na odkaz. Řešením by bylo
+  buď přidat `url` do embedovaných variantů v řádcích seznamu, nebo zapnout
+  filtr na kolekci (`?id[]=` / `?product.id[]=`).
 
 - **Účtenka / PDF → seznam.** Import z textu funguje na frontendu (uživatel
   vloží řádky, ty se párují proti katalogu). Fotka nebo PDF účtenky vyžaduje
   OCR, tedy serverovou službu — např. `POST /receipts` s obrázkem, která vrátí
   rozpoznané řádky, a ty už frontend umí spárovat stejnou logikou jako
   vložený text.
+
+- **Katalogy si neshodnou názvy produktů.** Pro jednu vaničku Flory vrací
+  Košík `name: "Light"` s značkou jen v `manufacturer`, Rohlík
+  `"Flora Light"`, Tesco `"Flora Light 400g"`. Někde je v `manufacturer`
+  doslova `unknown` nebo prázdno, a někde si `name` a `unitValue`
+  protiřečí (`"...405g"` na variantě s `unitValue: 400`). Frontend to
+  skládá do jednoho titulku sám (`productTitle()` v `navrh-shared.tsx`),
+  ale správně by to patřilo do dat.
+
+- **Backend radši nabídne náhradu, než by nechal prázdno.** I u nepotraviny
+  (kabel Lightning) vrátí `to-replace` sloupec pro všech 5 obchodů. Vetev
+  „tento obchod položku nemá“ se tím prakticky nedá vyvolat.
 
 - **`GET /countries/{id}/categories` vrací 500** při hlavičce
   `Accept: application/json`. Funguje jen `application/ld+json`. Frontend to
