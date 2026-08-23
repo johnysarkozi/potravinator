@@ -167,3 +167,26 @@ Na ten stroj sa nedostanem, takže tieto veci treba na mieste potvrdiť:
 - **skutočný port produkčnej appky** — `ecosystem.config.js` ho nenastavuje,
   takže beží na predvolenom 3000; ak nie, prispôsobte
 - **verzia Node na serveri** — projekt potrebuje >= 18.17, odporúčam 22
+
+## Známé limity a co by chtělo backend
+
+Tyhle věci na `/navrh` nejdou dořešit jen na frontendu:
+
+- **Historie cen se stahuje po produktech.** `GET /product_price_histories/{productId}`
+  je custom route pro jeden produkt; kolekce `/product_price_histories` neexistuje
+  (vrací 404), takže nejde načíst historii pro celý seznam jedním dotazem.
+  Frontend to obchází tím, že historii tahá teprve když se sekce s grafy
+  dostane do viewportu (IntersectionObserver). Pro seznam o 20 položkách
+  to je pořád 20 dotazů. Řešením by byl filtr na kolekci, např.
+  `GET /product_price_histories?product.id[]=1&product.id[]=2`.
+
+- **Účtenka / PDF → seznam.** Import z textu funguje na frontendu (uživatel
+  vloží řádky, ty se párují proti katalogu). Fotka nebo PDF účtenky vyžaduje
+  OCR, tedy serverovou službu — např. `POST /receipts` s obrázkem, která vrátí
+  rozpoznané řádky, a ty už frontend umí spárovat stejnou logikou jako
+  vložený text.
+
+- **`GET /countries/{id}/categories` vrací 500** při hlavičce
+  `Accept: application/json`. Funguje jen `application/ld+json`. Frontend to
+  obchází explicitním přepsáním hlavičky u tohohle jednoho dotazu, ale je to
+  chyba na backendu.
