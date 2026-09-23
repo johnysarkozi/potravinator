@@ -1,0 +1,29 @@
+# Probes the Potravinator backend from a GitHub runner and commits the raw
+# responses to docs/api-snapshot/. The development container cannot reach
+# *.potravinator.cz, so this is how the API gets inspected. Runs only when the
+# probe plan changes, and only on claude/* branches.
+name: api-probe
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['tools/api-probe/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: DNS
+        run: for h in backend.potravinator.cz www.potravinator.cz api.potravinator.cz images.potravinator.cz; do echo "$h $(getent hosts $h || echo none)"; done
+      - name: Probe
+        run: python3 tools/api-probe/probe.py
+      - name: Commit snapshot
+        run: |
+          git config user.name "api-probe"
+          git config user.email "api-probe@users.noreply.github.com"
+          git add docs/api-snapshot
+          git commit -m "chore(api-snapshot): $(python3 -c "import json;print(json.load(open('tools/api-probe/plan.json'))['run'])")" || exit 0
+          git push
