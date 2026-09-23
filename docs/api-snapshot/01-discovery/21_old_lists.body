@@ -1,0 +1,1 @@
+{"@context":"\/contexts\/Error","@id":"\/errors\/401","@type":"Error","title":"An error occurred","detail":"Full authentication is required to access this resource.","status":401,"type":"\/errors\/401","description":"Full authentication is required to access this resource."}

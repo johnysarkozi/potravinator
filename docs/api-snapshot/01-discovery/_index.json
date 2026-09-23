@@ -1,0 +1,796 @@
+{
+  "vars": {},
+  "requests": [
+    {
+      "i": 0,
+      "name": "root",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 770,
+      "bytes": 141,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:19 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"6d1dcbc12a835092\""
+      }
+    },
+    {
+      "i": 1,
+      "name": "root_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 406,
+      "ms": 653,
+      "bytes": 270,
+      "content_type": "application/problem+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/problem+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:20 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+      }
+    },
+    {
+      "i": 2,
+      "name": "root_html",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/",
+      "req_headers": {
+        "Accept": "text/html",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 953,
+      "bytes": 85968,
+      "content_type": "text/html; charset=UTF-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:21 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"6554ff3600d64031\"",
+        "Vary": "Content-Type"
+      }
+    },
+    {
+      "i": 3,
+      "name": "docs_openapi",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/docs.jsonopenapi",
+      "req_headers": {
+        "Accept": "application/vnd.openapi+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 794,
+      "bytes": 82443,
+      "content_type": "application/vnd.openapi+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/vnd.openapi+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:22 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"8e436280a6f78d3c\""
+      }
+    },
+    {
+      "i": 4,
+      "name": "docs_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/docs.json",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 500,
+      "bytes": 109,
+      "content_type": "application/problem+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/problem+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:22 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+      }
+    },
+    {
+      "i": 5,
+      "name": "docs_jsonld",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/docs.jsonld",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 865,
+      "bytes": 60538,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:23 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"9606a1da81436e96\""
+      }
+    },
+    {
+      "i": 6,
+      "name": "docs_html",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/docs",
+      "req_headers": {
+        "Accept": "text/html",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 750,
+      "bytes": 85964,
+      "content_type": "text/html; charset=UTF-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:24 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"a4d926e3f7a46419\"",
+        "Vary": "Content-Type"
+      }
+    },
+    {
+      "i": 7,
+      "name": "api_root",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 809,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:25 GMT"
+      }
+    },
+    {
+      "i": 8,
+      "name": "api_docs_openapi",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/docs.jsonopenapi",
+      "req_headers": {
+        "Accept": "application/vnd.openapi+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 509,
+      "bytes": 993,
+      "content_type": "text/html; charset=UTF-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:25 GMT"
+      }
+    },
+    {
+      "i": 9,
+      "name": "api_docs_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/docs.json",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 503,
+      "bytes": 123,
+      "content_type": "application/json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:26 GMT"
+      }
+    },
+    {
+      "i": 10,
+      "name": "api_v1",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/v1",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 508,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:26 GMT"
+      }
+    },
+    {
+      "i": 11,
+      "name": "openapi_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/openapi.json",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 500,
+      "bytes": 123,
+      "content_type": "application/json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:27 GMT"
+      }
+    },
+    {
+      "i": 12,
+      "name": "api_openapi_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/openapi.json",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 519,
+      "bytes": 123,
+      "content_type": "application/json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:27 GMT"
+      }
+    },
+    {
+      "i": 13,
+      "name": "swagger_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/swagger.json",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 520,
+      "bytes": 123,
+      "content_type": "application/json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:28 GMT"
+      }
+    },
+    {
+      "i": 14,
+      "name": "health",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/health",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 1054,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:29 GMT"
+      }
+    },
+    {
+      "i": 15,
+      "name": "old_shops",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/countries/1/shops",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 744,
+      "bytes": 415,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:30 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"0443009057a2ea65\""
+      }
+    },
+    {
+      "i": 16,
+      "name": "old_shops_json",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/countries/1/shops",
+      "req_headers": {
+        "Accept": "application/json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 455,
+      "bytes": 138,
+      "content_type": "application/json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:30 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"680026b4fa216ad4\""
+      }
+    },
+    {
+      "i": 17,
+      "name": "old_cats",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/countries/1/categories?page=1&itemsPerPage=5&exists%5Bparent%5D=false",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 1122,
+      "bytes": 48260,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Content-Length": "48260",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "max-age=3600, public",
+        "Date": "Wed, 23 Sep 2026 07:32:31 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"f1c8ab10a76a135e\"",
+        "X-Content-Digest": "en101db7261b2b9c09f1c8ab10a76a135e",
+        "Age": "0"
+      }
+    },
+    {
+      "i": 18,
+      "name": "old_variants",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/product_variants?page=1&itemsPerPage=3&shop.id=1&fulltext=mleko",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 633,
+      "bytes": 2199,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:32 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"72f2a0c7f19e75a9\""
+      }
+    },
+    {
+      "i": 19,
+      "name": "old_variant_one",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/product_variants/46570",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 464,
+      "bytes": 510,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:32 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"5c7dfaa51fe484b1\""
+      }
+    },
+    {
+      "i": 20,
+      "name": "old_hist",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/product_price_histories/910?page=1&itemsPerPage=5",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 200,
+      "ms": 1280,
+      "bytes": 66724,
+      "content_type": "application/ld+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:33 GMT",
+        "Link": "<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+        "ETag": "\"666c78bc322346b6\""
+      }
+    },
+    {
+      "i": 21,
+      "name": "old_lists",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/shopping_lists?page=1&itemsPerPage=5",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 401,
+      "ms": 718,
+      "bytes": 275,
+      "content_type": "application/problem+json; charset=utf-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/problem+json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "deny",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:34 GMT",
+        "Link": "<http://www.w3.org/ns/hydra/error>; rel=\"http://www.w3.org/ns/json-ld#error\",<https://backend.potravinator.cz/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\""
+      }
+    },
+    {
+      "i": 22,
+      "name": "countries",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/countries",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 514,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:35 GMT"
+      }
+    },
+    {
+      "i": 23,
+      "name": "shops",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/shops",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 710,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:36 GMT"
+      }
+    },
+    {
+      "i": 24,
+      "name": "categories",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/categories?page=1&itemsPerPage=5",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 526,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:36 GMT"
+      }
+    },
+    {
+      "i": 25,
+      "name": "products",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/products?page=1&itemsPerPage=3",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 827,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:37 GMT"
+      }
+    },
+    {
+      "i": 26,
+      "name": "api_shops",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/shops",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 509,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:37 GMT"
+      }
+    },
+    {
+      "i": 27,
+      "name": "api_products",
+      "method": "GET",
+      "url": "https://backend.potravinator.cz/api/products",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 512,
+      "bytes": 123,
+      "content_type": "application/ld+json",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Content-Type": "application/ld+json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept",
+        "Cache-Control": "no-cache, private",
+        "Date": "Wed, 23 Sep 2026 07:32:38 GMT"
+      }
+    },
+    {
+      "i": 28,
+      "name": "www",
+      "method": "GET",
+      "url": "https://www.potravinator.cz/",
+      "req_headers": {
+        "Accept": "text/html",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 401,
+      "ms": 599,
+      "bytes": 188,
+      "content_type": "text/html",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Date": "Wed, 23 Sep 2026 07:32:39 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "188",
+        "Connection": "close",
+        "WWW-Authenticate": "Basic realm=\"Restricted Access\""
+      }
+    },
+    {
+      "i": 29,
+      "name": "api_host",
+      "method": "GET",
+      "url": "https://api.potravinator.cz/",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 404,
+      "ms": 458,
+      "bytes": 196,
+      "content_type": "text/html; charset=iso-8859-1",
+      "resp_headers": {
+        "Server": "openresty",
+        "Date": "Wed, 23 Sep 2026 07:32:39 GMT",
+        "Content-Type": "text/html; charset=iso-8859-1",
+        "Content-Length": "196",
+        "Connection": "close",
+        "Vary": "Accept-Encoding"
+      }
+    },
+    {
+      "i": 30,
+      "name": "images_host",
+      "method": "GET",
+      "url": "https://images.potravinator.cz/",
+      "req_headers": {
+        "Accept": "application/ld+json",
+        "User-Agent": "potravinator-api-probe"
+      },
+      "req_body": null,
+      "status": 400,
+      "ms": 565,
+      "bytes": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "resp_headers": {
+        "Server": "nginx/1.24.0 (Ubuntu)",
+        "Date": "Wed, 23 Sep 2026 07:32:40 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "0",
+        "Connection": "close"
+      }
+    }
+  ]
+}
